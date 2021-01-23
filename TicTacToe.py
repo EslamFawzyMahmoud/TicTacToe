@@ -31,7 +31,7 @@ def game():
             continue
 
 
-        if count == 5:
+        if count >= 5:
             if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ':
                 print_board(theBoard)
                 print("Game Over")
@@ -86,6 +86,8 @@ def game():
     restart()
 
 def restart():
+    for i in theBoard:
+        theBoard[i]=' '
     print("Do You Want to play again?")
     print("Enter y or Y if you want")
     choice=input()
